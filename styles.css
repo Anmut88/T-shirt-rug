@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f2ed;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: #2c2b28;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 1.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 1.25rem 1rem 1.5rem 1rem;
+}
+
+.tabs-header {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid #e2ddd6;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: all 0.2s ease;
+    color: #5f5b55;
+    font-family: inherit;
+    touch-action: manipulation;
+}
+
+.tab-btn.active {
+    background: #2c6e49;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tab-btn:not(.active):hover {
+    background: #e9e5de;
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeSlide 0.2s ease-out;
+}
+
+.tab-panel.active-panel {
+    display: block;
+}
+
+/* Welcome page styles */
+.welcome-content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.welcome-content h1 {
+    color: #2c6e49;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.welcome-content .intro-text {
+    font-size: 1.1rem;
+    color: #4a5b4e;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.welcome-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.welcome-btn {
+    background: #2c6e49;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.welcome-btn:hover {
+    background: #1e4a2e;
+}
+
+.material-list {
+    background: #f0ede7;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.material-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cutting-steps-list li {
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.cutting-steps-list ol {
+    margin-left: 1.5rem;
+    line-height: 1.3;
+}
+
+.cutting-diagram {
+    width: 220px;
+    flex-shrink: 0;
+    text-align: center;
+    background: #f0ede7;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    align-self: flex-start;
+}
+
+.cutting-diagram img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cutting-steps-list {
+    flex: 1;
+    min-width: 200px;
+}
+.cutting-steps > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(6px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.instruction-block {
+    background: #fefaf5;
+    border-left: 5px solid #2c6e49;
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.rug-scheme {
+    background: #f0ede7;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    margin: 1rem 0 1.5rem 0;
+    text-align: center;
+    border: 1px dashed #bcb09b;
+}
+
+.scheme-placeholder {
+    font-size: 0.85rem;
+    color: #4a6741;
+    background: #e2dcd2;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+.row-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #e9e2d9;
+}
+
+.stitch-link {
+    color: #1f6e43;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0 2px;
+    display: inline-block;
+    touch-action: manipulation;
+}
+
+.stitch-link:active {
+    background: #e0f0e4;
+    border-radius: 12px;
+}
+
+.small-note {
+    background: #eef3ea;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.stitches-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stitch-tabs-mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ddd6cd;
+    padding-bottom: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.mini-tab {
+    background: #f0ebe4;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+    color: #2c3e2b;
+    touch-action: manipulation;
+    flex: 0 0 auto;
+}
+
+.mini-tab.active-mini {
+    background: #2c6e49;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.stitch-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    background: #fefbf7;
+    border-radius: 1.5rem;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.stitch-name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #2b5938;
+}
+
+.img-placeholder {
+    background: #e2dbcf;
+    width: 100%;
+    max-width: 100%;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    border: 2px dashed #a28f70;
+    color: #5f4c2b;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem 0.8rem;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.img-placeholder span {
+    background: #fff3e4;
+    padding: 8px 14px;
+    border-radius: 32px;
+    display: inline-block;
+}
+
+.back-home {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    background: #e7e2da;
+    padding: 0.5rem 1.2rem;
+    border-radius: 3rem;
+    font-size: 0.85rem;
+    color: #3b3a36;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+    touch-action: manipulation;
+}
+
+.back-link:active {
+    background: #cfc8bd;
+}
+
+.footer-links {
+    margin-top: 2.5rem;
+    padding-top: 1.3rem;
+    border-top: 2px solid #e1dbd3;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #2c6e49;
+    text-decoration: none;
+    font-weight: 500;
+    background: #f2efe9;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.footer-links a:active {
+    background: #2c6e49;
+    color: white;
+}
+
+h2 {
+    color: #2c5e3f;
+    margin-bottom: 0.9rem;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+p, li {
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+ul, ol {
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 0.6rem;
+    }
+    .container {
+        padding: 1rem 0.9rem;
+        border-radius: 1.25rem;
+    }
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    .row-card {
+        padding: 0.8rem;
+    }
+    .stitch-name {
+        font-size: 1.25rem;
+    }
+    .mini-tab {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    /* ADD THESE FOR BETTER MOBILE EXPERIENCE */
+    .cutting-diagram {
+        width: 120px;
+    }
+
+    .cutting-steps-list {
+        min-width: 100%;
+    }
+
+    .cutting-steps > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .material-list {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .instruction-block, .row-card {
+        padding: 0.7rem;
+    }
+}
+
+button, .back-link, .footer-links a, .mini-tab, .tab-btn {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+
+
+.stitch-link:focus-visible, .mini-tab:focus-visible, .tab-btn:focus-visible {
+    outline: 2px solid #2c6e49;
+    outline-offset: 2px;
+}
+
+.rug-scheme img {
+    max-width: 270px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    .rug-scheme img {
+        max-width: 500px;
+    }
+}
