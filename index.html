@@ -1,203 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-    <title>Knitted Sustainable Rug · Upcycled T‑shirt Tutorial</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>针织可持续地毯 · 旧T恤改造教程</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fef9f0; color: #2e241f; line-height: 1.5; padding: 1rem; }
+        .container { max-width: 1300px; margin: 0 auto; background: white; border-radius: 2rem; box-shadow: 0 12px 28px rgba(0,0,0,0.08); overflow: hidden; padding: 1.5rem 2rem; }
+        .lang-switch { display: flex; justify-content: flex-end; gap: 12px; margin-bottom: 20px; }
+        .lang-btn { background: #e0d6c8; border: none; padding: 6px 18px; border-radius: 30px; font-weight: 600; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
+        .lang-btn.active { background: #2c6e49; color: white; }
+        .tabs-header { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 2px solid #e2dbcf; padding-bottom: 8px; margin-bottom: 24px; }
+        .tab-btn { background: none; border: none; padding: 10px 20px; font-size: 1rem; cursor: pointer; border-radius: 30px; transition: 0.2s; font-weight: 500; }
+        .tab-btn.active { background: #2c6e49; color: white; }
+        .tab-panel { display: none; }
+        .tab-panel.active-panel { display: block; }
+        h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #2c4b2c; }
+        h2 { font-size: 1.6rem; margin: 1.5rem 0 1rem 0; border-left: 6px solid #6a9c6a; padding-left: 1rem; }
+        h3 { font-size: 1.3rem; margin: 1rem 0 0.5rem 0; color: #3e6b3e; }
+        .material-list { background: #eef3ea; padding: 1rem; border-radius: 1rem; margin: 1rem 0; }
+        .welcome-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0; }
+        .welcome-btn, .btn-card { background: #6a9c6a; color: white; border: none; padding: 10px 20px; border-radius: 40px; cursor: pointer; font-weight: bold; }
+        .tabs-header { justify-content: center; }
+        .welcome-content { text-align: center; }
+        /* Restore original welcome page typography */
+.welcome-content h1 {
+    color: #2c4b2c;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-content .intro-text {
+    color: #4a3f38;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.material-list {
+    background: #eef3ea;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #2e241f;
+}
+
+.material-list strong {
+    color: #2c4b2c;
+}
+
+.material-list li {
+    color: #2e241f;
+}
+
+.welcome-buttons .welcome-btn {
+    background: #6a9c6a;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.welcome-buttons .welcome-btn:hover {
+    background: #4f7a4f;
+}
+        .welcome-buttons { justify-content: center; }
+        .material-list { display: inline-block; text-align: left; width: auto; margin: 1rem auto; }
+        .rug-scheme { text-align: center; }
+        .instruction-block { background: #fffaf2; border-radius: 1rem; padding: 1.2rem; margin: 1.5rem 0; border-left: 5px solid #8bbf8b; }
+        .cutting-steps { background: #fffaf5; border-radius: 1rem; padding: 1rem; margin: 1rem 0; }
+        .small-note { background: #fcf4e3; padding: 0.8rem; border-radius: 1rem; margin: 1rem 0; }
+        .footer-links { margin-top: 2rem; text-align: center; border-top: 1px solid #ddd; padding-top: 1.5rem; display: flex; gap: 20px; justify-content: center; }
+        .footer-links a { text-decoration: none; color: #2c6e49; font-weight: 500; }
+        .back-home { text-align: right; margin: 20px 0 10px; }
+        .back-link { color: #6a9c6a; text-decoration: none; font-weight: bold; cursor: pointer; }
+        .stitches-grid { margin-top: 1rem; }
+        .stitch-tabs-mini { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .back-link-btn { background: none; border: none;  color: #6a9c6a; font-weight: bold; cursor: pointer;font-size: 1rem; text-decoration: underline;}
+        .mini-tab { background: #e0d6c8; border: none; padding: 6px 14px; border-radius: 30px; cursor: pointer; }
+        .mini-tab.active-mini { background: #2c6e49; color: white; }
+        /* Welcome page material list - bullet points inside frame */
+.welcome-content .material-list {
+    background: #eef3ea;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    text-align: left;
+    display: inline-block;
+    width: auto;
+}
+
+.welcome-content .material-list ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.5rem;
+}
+
+.welcome-content .material-list li {
+    margin: 0.25rem 0;
+    color: #2e241f;
+}
+        .stitch-detail { background: #fefaf5; border-radius: 1rem; padding: 1.5rem; text-align: center; }
+        .modal-trigger, .stitch-link { background: none; border: none; color: #2c6e49; text-decoration: underline; cursor: pointer; font-weight: 500; }
+        img { max-width: 100%; border-radius: 12px; }
+        @media (max-width: 700px) { .container { padding: 1rem; } }
+    </style>
 </head>
 <body>
 <div class="container">
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en"> English</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+
     <div class="tabs-header">
-    <button class="tab-btn active" data-tab="tab-welcome">🏠 Welcome</button>
-    <button class="tab-btn" data-tab="tab-cut">✂️ Cut T-shirt</button>
-    <button class="tab-btn" data-tab="tab-instructions">🧶 Instructions</button>
-    <button class="tab-btn" data-tab="tab-basic-stitches">🪡 Basic stitches</button>
-</div>
-
-    <!-- MAIN PAGE / WELCOME TAB -->
-<div id="tab-welcome" class="tab-panel active-panel">
-    <div class="welcome-content">
-        <h1>🧶 Knitted Sustainable Rug</h1>
-        <p class="intro-text">Turn old t-shirts into a beautiful, eco-friendly rug! This tutorial will guide you step by step through the process of creating your own sustainable home decor.</p>
-
-        <div class="material-list">
-            <strong>Materials you'll need:</strong>
-            <ul>
-                <li>👕 Old t-shirts </li>
-                <li>✂️ Scissors</li>
-                <li>🪝 Crochet hook (size 8-10mm recommended)</li>
-            </ul>
-        </div>
-
-        <p><strong>🌿 Ready to start?</strong></p>
-        <div class="welcome-buttons">
-            <button class="welcome-btn" data-tab="tab-cut">✂️ Cut T-shirt →</button>
-            <button class="welcome-btn" data-tab="tab-instructions">📖 Start Instructions →</button>
-            <button class="welcome-btn" data-tab="tab-basic-stitches">🪡 Learn Basic Stitches →</button>
-        </div>
+        <button class="tab-btn active" data-tab="tab-welcome" data-en="🏠 Welcome" data-zh="🏠 欢迎">🏠 Welcome</button>
+        <button class="tab-btn" data-tab="tab-cut" data-en="✂️ Cut T-shirt" data-zh="✂️ 剪T恤">✂️ Cut T-shirt</button>
+        <button class="tab-btn" data-tab="tab-instructions" data-en="🧶 Instructions" data-zh="🧶 教程">🧶 Instructions</button>
+        <button class="tab-btn" data-tab="tab-basic-stitches" data-en="🪡 Basic stitches" data-zh="🪡 基础针法">🪡 Basic stitches</button>
     </div>
-</div>
 
-    <!-- TAB 1 - INSTRUCTION PANEL (SINGLE, NOT DUPLICATED) -->
-    <div id="tab-instructions" class="tab-panel">
-        <!-- Three images row -->
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
-            <img src="oval-rug.jpg" alt="Scheme of oval knitted rug" style="height:120px; width:auto; border-radius:16px;">
-            <img src="rug2.jpg" alt="Second image description" style="height:120px; width:auto; border-radius:16px;">
-            <img src="rug3.jpg" alt="Third image description" style="height:120px; width:auto; border-radius:16px;">
-        </div>
-
-        <!-- Rug scheme -->
-        <div class="rug-scheme">
-            <div class="scheme-placeholder">
-                📐 OVAL RUG SCHEME
-                <div style="text-align: center; margin-top: 12px;">
-                   <img src="rug-scheme.jpg" alt="Rug shape scheme" style="border-radius: 12px;">
-                </div>
+    <!-- WELCOME TAB -->
+    <div id="tab-welcome" class="tab-panel active-panel">
+        <div class="welcome-content">
+            <h1 data-en="🧶 Knitted Sustainable Rug" data-zh="🧶 针织可持续地毯">🧶 Knitted Sustainable Rug</h1>
+            <p class="intro-text" data-en="Turn old t-shirts into a beautiful, eco-friendly rug! This tutorial will guide you step by step through the process of creating your own sustainable home decor." data-zh="将旧T恤变成漂亮环保的地毯！本教程将一步步指导你制作属于自己的可持续家居装饰。">Turn old t-shirts into a beautiful, eco-friendly rug! This tutorial will guide you step by step through the process of creating your own sustainable home decor.</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+                <img src="oval-rug.jpg" alt="rug" style="height:100px; border-radius:12px;">
+                <img src="rug2.jpg" alt="rug2" style="height:100px; border-radius:12px;">
+                <img src="rug3.jpg" alt="rug3" style="height:100px; border-radius:12px;">
             </div>
-        </div>
-
-        <!-- BEGINNING -->
-        <div class="instruction-block">
-            <h3>🌿 Beginning</h3>
-            <p>Make a chain of <strong>12 chain stitches</strong>
-                (<button class="modal-trigger" data-img="chain-stitch.jpg" data-title="Chain Stitch" data-desc="Yarn over, pull through the loop on hook. Repeat to form a chain.">⛓️ chain stitch</button>).
-            </p>
-        </div>
-
-         <!-- ROW 1 -->
-        <div class="instruction-block">
-            <h3>📌 Row 1</h3>
-            <p>Add 3 <button class="modal-trigger" data-img="chain-stitch.jpg" data-title="Chain Stitch" data-desc="Yarn over, pull through the loop on hook. Repeat to form a chain."> chain stitches</button>.<span style="color: purple;">[We will do this in the beginning of each row.]</span><br>
-            Work 5 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="Double Crochets in the Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch.">double crochets in the same stitch</button> - they all go to the <span style="color: red; font-weight: bold;">4th</span> chain from the hook.
-            <br>
-            Work 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochet</button> into each chain to the end of the row.<br>
-            In the last chain, work 6 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochets</button> <span style="color: purple;">[this creates the rounded end]</span>.<br>
-            Now continue along the opposite side of the chain: work 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochet</button> into each chain across, starting from the first chain (next to the one where the 6 double crochets were just made). You should make 10 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochets</button> before the end of the row.<br>
-            Join with a <button class="modal-trigger" data-img="slip-stitch.jpg" data-title="Slip Stitch" data-desc="Insert hook into stitch, yarn over, pull directly through the loop on hook."> slip stitch</button>
-            to the top of the turning chain.
-            </p>
-        </div>
-
-         <!-- ROW 2 -->
-        <div class="instruction-block">
-            <h3>📌 Row 2</h3>
-            <p>Start new row with 3 <button class="modal-trigger" data-img="chain-stitch.jpg" data-title="Chain Stitch" data-desc="Yarn over, pull through the loop on hook. Repeat to form a chain."> chain stitches</button>, then work 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochet</button> in the first stitch.<br>
-            In each of the following 5 stitched, work 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="Double Crochets in the Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> double crochets in the same stitch</button>.<span style="color: purple;">[this creates the rounded end]</span><br>
-            Now work 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochet</button> into the following 10 stitches until you reach the rounded end.<br>
-            Work 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="Double Crochets in the Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> double crochets into each of the next 6 stitches</button> (the rounded part).<br>
-            In each of the following 6 stitched, work 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="Double Crochets in the Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> double crochets in the same stitch</button>.<span style="color: purple;">[this creates the rounded end]</span><br>
-            Join with a <button class="modal-trigger" data-img="slip-stitch.jpg" data-title="Slip Stitch" data-desc="Insert hook into stitch, yarn over, pull directly through the loop on hook."> slip stitch</button>
-            to the top of the turning chain.</p>
-        </div>
-
-        <!-- Rows 3 and further -->
-        <div class="instruction-block">
-            <h3>📌 Rows 3 and further</h3>
-            <p>Continue working in the same way, following the increase pattern:</p>
-             <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-                <li><strong>On straight sides:</strong> 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> double crochet (DC)</button> per stitch.</li>
-                <li><strong>On rounded ends:</strong> increase evenly following the pattern below.</li>
-            </ul>
-            <!-- 2 COLUMNS LAYOUT -->
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 15px 0;">
-
-                <!-- LEFT COLUMN - IMAGE -->
-                <div style="flex: 1; min-width: 200px; text-align: center;">
-                    <div style="background: #f0ede7; border-radius: 16px; padding: 15px;">
-                        <p><strong>Follow the instructions for the round end shown in the figure:</strong></p>
-                        <img src="round-end.jpg" alt="Round end instructions" style="width:100%; max-width:250px; height:auto; border-radius:12px; margin: 10px 0;">
-                    </div>
-                </div>
-
-
-
-                <!-- RIGHT COLUMN - INSTRUCTIONS -->
-                <div style="flex: 2; min-width: 250px;">
-                    <div style="background: #fefaf5; border-radius: 16px; padding: 15px; border-left: 5px solid #2c6e49;">
-                        <p><strong>📋 Increase pattern for rounded ends:</strong></p>
-                        <ul style="margin-left: 1rem; line-height: 1.8;">
-                            <li><strong>3rd row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="2 Double Crochet in Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> DC in the same stitch</button> + 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> DC</button> in the next stitch → <strong>repeat 6 times</strong>.<br>
-                            <span style="color: purple; font-size: 0.85rem;">Note: In the beginning of each row, one DC is replaced by 3 chain stitches.</span></li>
-
-                            <li><strong>4th row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="2 Double Crochet in Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> DC in the same stitch</button> + 2 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> DC</button> in the next 2 stitches → <strong>repeat 6 times</strong>.</li>
-
-                            <li><strong>5th row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="2 Double Crochet in Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> DC in the same stitch</button> + 3 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> DC</button> in the next 3 stitches → <strong>repeat 6 times</strong>.</li>
-
-                            <li><strong>6th row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title="2 Double Crochet in Same Stitch" data-desc="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch."> DC in the same stitch</button> + 4 <button class="modal-trigger" data-img="double-crochet.jpg" data-title="Double Crochet" data-desc="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops."> DC</button> in the next 4 stitches → <strong>repeat 6 times</strong>.</li>
-
-                            <li><strong>And so on...</strong> Each row increases the number of single DCs by 1 before repeating.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="material-list">
+                <strong data-en="Materials you'll need:" data-zh="你需要的材料：">Materials you'll need:</strong>
+                <ul>
+                    <li data-en="👕 Old t-shirts" data-zh="👕 旧T恤">👕 Old t-shirts</li>
+                    <li data-en="✂️ Scissors" data-zh="✂️ 剪刀">✂️ Scissors</li>
+                    <li data-en="🪝 Crochet hook (size 8-10mm recommended)" data-zh="🪝 钩针（推荐8-10mm）">🪝 Crochet hook (size 8-10mm recommended)</li>
+                </ul>
             </div>
-
-
-            <div class="small-note">
-                💡 Tip: To keep the rug perfectly flat, distribute increases uniformly around both rounded ends.
+            <p><strong data-en="🌿 Ready to start?" data-zh="🌿 准备好开始了吗？">🌿 Ready to start?</strong></p>
+            <div class="welcome-buttons">
+                <button class="welcome-btn" data-tab="tab-cut" data-en="✂️ Cut T-shirt →" data-zh="✂️ 剪T恤 →">✂️ Cut T-shirt →</button>
+                <button class="welcome-btn" data-tab="tab-instructions" data-en="📖 Start Instructions →" data-zh="📖 开始教程 →">📖 Start Instructions →</button>
+                <button class="welcome-btn" data-tab="tab-basic-stitches" data-en="🪡 Learn Basic Stitches →" data-zh="🪡 学习基础针法 →">🪡 Learn Basic Stitches →</button>
             </div>
-
-            <p style="margin-top: 12px;">🔁 <strong>Stitch references:</strong>
-                <button class="stitch-link" data-stitch-trigger="chain">chain</button> ·
-                <button class="stitch-link" data-stitch-trigger="double">double crochet (DC)</button> ·
-                <button class="stitch-link" data-stitch-trigger="inc">2 DC in same stitch</button> ·
-                <button class="stitch-link" data-stitch-trigger="slip">slip stitch</button>
-            </p>
-        </div>
-
-        <div class="back-home">
-            <a href="#" class="back-link" id="backToTopInstructions">↑ Back to top</a>
         </div>
     </div>
 
-        <!-- TAB 2 - BASIC STITCHES -->
-        <div id="tab-basic-stitches" class="tab-panel">
-            <h2>🧵 Basic stitches</h2>
-            <p style="margin-bottom: 1rem;">Tap any stitch to see description + image.</p>
-            <div class="stitches-grid">
-                <div class="stitch-tabs-mini" id="miniStitchTabs">
-                    <button class="mini-tab active-mini" data-stitch="beginning">Beginning</button>
-                    <button class="mini-tab" data-stitch="chain">Chain stitch (Ch.st.)</button>
-                    <button class="mini-tab" data-stitch="single">Single crochet (SC)</button>
-                    <button class="mini-tab" data-stitch="double">Double crochet (DC)</button>
-                    <button class="mini-tab" data-stitch="inc">2 DC in one stitch</button>
-                    <button class="mini-tab" data-stitch="slip">Slip stitch</button>
-                </div>
-                <div id="stitchDisplayArea" class="stitch-detail">
-                    <!-- Content will be filled by JavaScript -->
-                </div>
-            </div>
-            <div class="back-home">
-                <a href="#" class="back-link" id="backToTopStitches">↑ Return to top</a>
-            </div>
-        </div>
-
-        <!-- TAB - CUT T-SHIRT -->
-        <div id="tab-cut" class="tab-panel">
-            <h2>✂️ How to Cut a T-shirt into Yarn</h2>
-            <p style="margin-bottom: 1rem;">There are <strong>three ways</strong> to cut a t-shirt into yarn. Choose the method that works best for you!</p>
+    <!-- TAB - CUT T-SHIRT -->
+    <div id="tab-cut" class="tab-panel">
+        <h2 data-en="✂️ How to Cut a T-shirt into Yarn" data-zh="✂️ 如何将T恤剪成毛线">✂️ How to Cut a T-shirt into Yarn</h2>
+        <p style="margin-bottom: 1rem;" data-en="There are three ways to cut a t-shirt into yarn. Choose the method that works best for you!" data-zh="有三种方法可以将T恤剪成毛线。选择最适合你的方法！">There are <strong>three ways</strong> to cut a t-shirt into yarn. Choose the method that works best for you!</p>
 
         <!-- OPTION 1: Maze / Spiral Method -->
         <div class="cutting-steps" style="margin-bottom: 30px;">
-            <h3 style="width:100%; margin-bottom: 15px;">📌 Option 1: Maze / Spiral Method</h3>
-
+            <h3 style="width:100%; margin-bottom: 15px;" data-en="📌 Option 1: Maze / Spiral Method" data-zh="📌 方法一：迷宫/螺旋法">📌 Option 1: Maze / Spiral Method</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
                 <div class="cutting-diagram">
                     <img src="maze.jpg" alt="Maze / Spiral cutting method">
                 </div>
                 <div class="cutting-steps-list">
                     <ol>
-                        <li>Lay the t-shirt flat on a table</li>
-                        <li>Cut straight across just <strong>under the armpits</strong> (remove the top part with sleeves)</li>
-                        <li>Cut off the <strong>bottom hem</strong> completely</li>
-                        <li>Make a small <strong>diagonal cut</strong> at one side edge to start</li>
-                        <li>Cut in a <strong>continuous spiral (maze pattern)</strong> around the tube</li>
-                        <li>Keep each strip about <strong>2 cm wide</strong></li>
-                        <li><strong>Do NOT cut all the way to the end</strong> - leave about 1-2 cm connected at the top</li>
-                        <li>Continue cutting until you reach the top (armpit area)</li>
-                        <li>Cut the last connection point diagonally to create one long continuous strip</li>
-                        <li><strong>Stretch the yarn</strong> firmly - it will curl into soft, stretchy yarn!</li>
+                        <li data-en="Lay the t-shirt flat on a table" data-zh="将T恤平放在桌子上">Lay the t-shirt flat on a table</li>
+                        <li data-en="Cut straight across just under the armpits (remove the top part with sleeves)" data-zh="在腋下水平剪开（去掉带袖子的上半部分）">Cut straight across just <strong>under the armpits</strong> (remove the top part with sleeves)</li>
+                        <li data-en="Cut off the bottom hem completely" data-zh="完全剪掉下摆">Cut off the <strong>bottom hem</strong> completely</li>
+                        <li data-en="Make a small diagonal cut at one side edge to start" data-zh="在一侧边缘剪一个小斜口作为开始">Make a small <strong>diagonal cut</strong> at one side edge to start</li>
+                        <li data-en="Cut in a continuous spiral (maze pattern) around the tube" data-zh="沿着筒状连续螺旋剪（迷宫图案）">Cut in a <strong>continuous spiral (maze pattern)</strong> around the tube</li>
+                        <li data-en="Keep each strip about 2 cm wide" data-zh="每条宽度约2厘米">Keep each strip about <strong>2 cm wide</strong></li>
+                        <li data-en="Do NOT cut all the way to the end - leave about 1-2 cm connected at the top" data-zh="不要完全剪到底——顶部留约1-2厘米不剪断"><strong>Do NOT cut all the way to the end</strong> - leave about 1-2 cm connected at the top</li>
+                        <li data-en="Continue cutting until you reach the top (armpit area)" data-zh="继续剪直到到达顶部（腋下区域）">Continue cutting until you reach the top (armpit area)</li>
+                        <li data-en="Cut the last connection point diagonally to create one long continuous strip" data-zh="斜向剪断最后的连接点，形成一条连续长带">Cut the last connection point diagonally to create one long continuous strip</li>
+                        <li data-en="Stretch the yarn firmly - it will curl into soft, stretchy yarn!" data-zh="用力拉伸毛线——它会卷成柔软有弹性的毛线！"><strong>Stretch the yarn</strong> firmly - it will curl into soft, stretchy yarn!</li>
                     </ol>
                 </div>
             </div>
@@ -205,23 +182,22 @@
 
         <!-- OPTION 2: Back & Forth Method -->
         <div class="cutting-steps" style="margin-bottom: 30px;">
-            <h3 style="width:100%; margin-bottom: 15px;">📌 Option 2: Back & Forth Method</h3>
-
+            <h3 style="width:100%; margin-bottom: 15px;" data-en="📌 Option 2: Back & Forth Method" data-zh="📌 方法二：来回剪法">📌 Option 2: Back & Forth Method</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
                 <div class="cutting-diagram">
                     <img src="back-forth.jpg" alt="Back and forth cutting method">
                 </div>
                 <div class="cutting-steps-list">
                     <ol>
-                        <li>Lay the t-shirt flat on a table or cutting mat</li>
-                        <li>Cut straight across just <strong>under the armpits</strong> (remove the top part with sleeves)</li>
-                        <li>Cut off the <strong>bottom hem</strong> completely</li>
-                        <li>Starting from the bottom, cut <strong>1-2 cm wide strips</strong> horizontally</li>
-                        <li><strong>Stop cutting 2-3 cm before reaching the armpit</strong> on each side</li>
-                        <li>You will get loops connected at the top (like a fringe)</li>
-                        <li>Open the loops and cut <strong>diagonally</strong> at one end</li>
-                        <li>This creates <strong>one long continuous strip</strong> of yarn</li>
-                        <li><strong>Stretch the yarn</strong> firmly - it will curl into soft, stretchy yarn!</li>
+                        <li data-en="Lay the t-shirt flat on a table or cutting mat" data-zh="将T恤平放在桌子或切割垫上">Lay the t-shirt flat on a table or cutting mat</li>
+                        <li data-en="Cut straight across just under the armpits (remove the top part with sleeves)" data-zh="在腋下水平剪开（去掉带袖子的上半部分）">Cut straight across just <strong>under the armpits</strong> (remove the top part with sleeves)</li>
+                        <li data-en="Cut off the bottom hem completely" data-zh="完全剪掉下摆">Cut off the <strong>bottom hem</strong> completely</li>
+                        <li data-en="Starting from the bottom, cut 1-2 cm wide strips horizontally" data-zh="从底部开始，水平剪出1-2厘米宽的条">Starting from the bottom, cut <strong>1-2 cm wide strips</strong> horizontally</li>
+                        <li data-en="Stop cutting 2-3 cm before reaching the armpit on each side" data-zh="距离腋下2-3厘米处停止（两侧都留）"><strong>Stop cutting 2-3 cm before reaching the armpit</strong> on each side</li>
+                        <li data-en="You will get loops connected at the top (like a fringe)" data-zh="你会得到顶部相连的环（像流苏一样）">You will get loops connected at the top (like a fringe)</li>
+                        <li data-en="Open the loops and cut diagonally at one end" data-zh="打开环，在一端斜向剪断">Open the loops and cut <strong>diagonally</strong> at one end</li>
+                        <li data-en="This creates one long continuous strip of yarn" data-zh="这样就形成一条连续长带">This creates <strong>one long continuous strip</strong> of yarn</li>
+                        <li data-en="Stretch the yarn firmly - it will curl into soft, stretchy yarn!" data-zh="用力拉伸毛线——它会卷成柔软有弹性的毛线！"><strong>Stretch the yarn</strong> firmly - it will curl into soft, stretchy yarn!</li>
                     </ol>
                 </div>
             </div>
@@ -229,239 +205,318 @@
 
         <!-- OPTION 3: Classic Fold & Cut Method -->
         <div class="cutting-steps" style="margin-bottom: 30px;">
-            <h3 style="width:100%; margin-bottom: 15px;">📌 Option 3: Classic Fold & Cut Method</h3>
-
+            <h3 style="width:100%; margin-bottom: 15px;" data-en="📌 Option 3: Classic Fold & Cut Method" data-zh="📌 方法三：经典折叠剪法">📌 Option 3: Classic Fold & Cut Method</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
-                <div class="cutting-diagram">
-                    <img src="t-shirt3.jpg" alt="Classic fold and cut method">
+                <div class="cutting-diagram" style="flex: 1; min-width: 150px;">
+                    <img src="t-shirt3.jpg" alt="Classic fold and cut method" style="width: 100%; max-width: 250px; height: auto; border-radius: 12px;">
                 </div>
-                <div class="cutting-steps-list">
+                <div class="cutting-steps-list" style="flex: 2; min-width: 200px;">
                     <ol>
-                        <li><strong>Lay an old t-shirt out flat</strong> on a table or cutting mat</li>
-                        <li><strong>Cut across the shirt at the armpits</strong> and <strong>cut off the bottom hem</strong></li>
-                        <li><strong>You should now have a large, flat loop of fabric</strong> (a tube shape)</li>
-                        <li><strong>Cut strips about 1 inch thick across the shirt</strong>, stopping about 1 inch from the other side (do not cut all the way through)</li>
-                        <li><strong>You should have dangling loops hanging</strong> on your arm. Cut <strong>diagonally from the end of the first loop to the start of the following loop</strong> to create one continuous strand</li>
-                        <li><strong>Pull the fabric to create rounded yarn!</strong> Stretch each strip firmly - it will curl into soft, round t-shirt yarn</li>
-                        <li>Your t-shirt yarn is ready for crocheting!</li>
+                        <li data-en="Lay an old t-shirt out flat on a table or cutting mat" data-zh="将旧T恤平放在桌子或切割垫上"><strong>Lay an old t-shirt out flat</strong> on a table or cutting mat</li>
+                        <li data-en="Cut across the shirt at the armpits and cut off the bottom hem" data-zh="在腋下剪开，并剪掉下摆"><strong>Cut across the shirt at the armpits</strong> and <strong>cut off the bottom hem</strong></li>
+                        <li data-en="You should now have a large, flat loop of fabric (a tube shape)" data-zh="现在你应该得到一个大的扁平布环（筒状）"><strong>You should now have a large, flat loop of fabric</strong> (a tube shape)</li>
+                        <li data-en="Cut strips about 2-3 cm wide across the shirt, stopping about 2-3 cm from the other side (do not cut all the way through)" data-zh="横向剪出约2-3厘米宽的条，距离另一侧约2-3厘米处停止（不要完全剪断）"><strong>Cut strips about 2-3 cm wide across the shirt</strong>, stopping about 2-3 cm from the other side (do not cut all the way through)</li>
+                        <li data-en="You should have dangling loops. Cut diagonally from the end of the first loop to the start of the following loop to create one continuous strand" data-zh="你会得到悬挂的环。从第一个环的末端斜向剪到下一个环的起点，形成连续长带"><strong>You should have dangling loops hanging</strong>. Cut <strong>diagonally from the end of the first loop to the start of the following loop</strong> to create one continuous strand</li>
+                        <li data-en="Pull the fabric to create rounded yarn! Stretch each strip firmly - it will curl into soft, round t-shirt yarn" data-zh="拉伸布料形成圆线！用力拉伸每条布条——它会卷成柔软圆润的T恤毛线"><strong>Pull the fabric to create rounded yarn!</strong> Stretch each strip firmly - it will curl into soft, round t-shirt yarn</li>
+                        <li data-en="Your t-shirt yarn is ready for crocheting!" data-zh="你的T恤毛线就可以用于钩织了！">Your t-shirt yarn is ready for crocheting!</li>
                     </ol>
                 </div>
             </div>
         </div>
-            <!-- Common Pro Tips -->
-            <div class="small-note" style="margin-top: 15px;">
-                💡 <strong>Pro Tips (for all methods):</strong>
-                <ul style="margin-left: 1rem; margin-top: 5px;">
-                    <li>Use sharp scissors for clean cuts</li>
-                    <li>Wider strips = thicker, chunkier rug</li>
-                    <li>Narrower strips = finer, lighter rug</li>
-                    <li>Stretch each strip well before crocheting - it will curl into round yarn!</li>
-                    <li>Roll the yarn into a ball for easy storage</li>
-                    <li>For best results, use 100% cotton t-shirts without side seams</li>
-                </ul>
-            </div>
 
-            <div class="back-home">
-                <a href="#" class="back-link" id="backToTopCut">↑ Back to top</a>
+        <!-- Common Pro Tips -->
+        <div class="small-note" style="margin-top: 15px;">
+            💡 <strong data-en="Pro Tips (for all methods):" data-zh="专业提示（适用于所有方法）：">Pro Tips (for all methods):</strong>
+            <ul style="margin-left: 1rem; margin-top: 5px;">
+                <li data-en="Use sharp scissors for clean cuts" data-zh="使用锋利的剪刀，切口干净">Use sharp scissors for clean cuts</li>
+                <li data-en="Wider strips = thicker, chunkier rug" data-zh="宽条 = 更厚实的地毯">Wider strips = thicker, chunkier rug</li>
+                <li data-en="Narrower strips = finer, lighter rug" data-zh="窄条 = 更精细轻便的地毯">Narrower strips = finer, lighter rug</li>
+                <li data-en="Stretch each strip well before crocheting - it will curl into round yarn!" data-zh="钩织前充分拉伸每条布条——它会卷成圆线！">Stretch each strip well before crocheting - it will curl into round yarn!</li>
+                <li data-en="Roll the yarn into a ball for easy storage" data-zh="将毛线卷成球，方便收纳">Roll the yarn into a ball for easy storage</li>
+                <li data-en="For best results, use 100% cotton t-shirts without side seams" data-zh="为获得最佳效果，使用无侧缝的100%纯棉T恤">For best results, use 100% cotton t-shirts without side seams</li>
+            </ul>
+        </div>
+
+        <div class="back-home">
+            <button class="back-link-btn" data-en="↑ Back to top" data-zh="↑ 返回顶部">↑ Back to top</button>
+        </div>
+    </div>
+
+    <!-- TAB - INSTRUCTIONS PANEL -->
+    <div id="tab-instructions" class="tab-panel">
+         <!-- Rug scheme -->
+        <div class="rug-scheme">
+            <div class="scheme-placeholder">
+                <span data-en="📐 OVAL RUG SCHEME" data-zh="📐 椭圆形地毯图解">📐 OVAL RUG SCHEME</span>
+                <div style="text-align: center; margin-top: 12px;">
+                <img src="rug-scheme2.jpg" alt="Rug shape scheme" style="border-radius: 12px; max-width: 750px; width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
             </div>
         </div>
 
+        <!-- BEGINNING -->
+        <div class="instruction-block">
+            <h3 data-en="🌿 Beginning" data-zh="🌿 开始">🌿 Beginning</h3>
+            <p><span data-en="Make a chain of" data-zh="起">Make a chain of</span> 12 <button class="modal-trigger" data-img="chain-stitch.jpg" data-title-en="chain stitches" data-title-zh="锁针" data-desc-en="Yarn over, pull through the loop on hook. Repeat to form a chain." data-desc-zh="挂线，拉过钩针上的线圈。重复形成锁针链。">⛓️ <span data-en="chain stitch" data-zh="锁针">chain stitch</span></button>.
+            </p>
+        </div>
 
+        <!-- ROW 1 -->
+        <div class="instruction-block">
+            <h3 data-en="📌 Row 1" data-zh="📌 第1行">📌 Row 1</h3>
+            <p>
+                <span data-en="Add" data-zh="加">Add</span> 3 <button class="modal-trigger" data-img="chain-stitch.jpg" data-title-en="chain stitches" data-title-zh="锁针" data-desc-en="Yarn over, pull through the loop on hook. Repeat to form a chain." data-desc-zh="挂线，拉过钩针上的线圈。重复形成锁针链。"><span data-en="chain stitches" data-zh="锁针">chain stitches</span></button>.
+                <span style="color: purple;" data-en="[We will do this in the beginning of each row.]" data-zh="[每行开头都要这样做。]">[We will do this in the beginning of each row.]</span><br>
+                <span data-en="Work" data-zh="钩">Work</span> 5 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochets in the Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="double crochets in the same stitch" data-zh="长针（同一针里）">double crochets in the same stitch</span></button>
+                <span data-en=" - they all go to the" data-zh="——它们都在从钩针数第"> - they all go to the</span> <span style="color: red; font-weight: bold;" data-en="4th" data-zh="4">4th</span> <span data-en="chain from the hook." data-zh="针锁针里。">chain from the hook.</span><br>
+                <span data-en="Work" data-zh="钩">Work</span> 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochet" data-zh="长针">double crochet</span></button>
+                <span data-en="into each chain to the end of the row." data-zh="在每个锁针里钩1针，直到行末。">into each chain to the end of the row.</span><br>
+                <span data-en="In the last chain, work" data-zh="在最后一个锁针里钩">In the last chain, work</span> 6 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="double crochets" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochets" data-zh="长针">double crochets</span></button>
+                <span style="color: purple;" data-en="[this creates the rounded end]" data-zh="[这形成了圆头]">[this creates the rounded end]</span>.<br>
+                <span data-en="Now continue along the opposite side of the chain: work" data-zh="现在沿着锁针的另一侧继续：钩">Now continue along the opposite side of the chain: work</span> 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochet" data-zh="长针">double crochet</span></button>
+                <span data-en="into each chain across, starting from the first chain (next to the one where the 6 double crochets were just made). You should make" data-zh="在每个锁针里钩1针，从第一个锁针开始（即刚钩完6个长针旁边的那个）。你应该钩">into each chain across, starting from the first chain (next to the one where the 6 double crochets were just made). You should make</span> 10 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="double crochets" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochets" data-zh="长针">double crochets</span></button>
+                <span data-en="before the end of the row." data-zh="直到行末。">before the end of the row.</span><br>
+                <span data-en="Join with a" data-zh="用">Join with a</span> <button class="modal-trigger" data-img="slip-stitch.jpg" data-title-en="Slip Stitch" data-title-zh="引拔针" data-desc-en="Insert hook into stitch, yarn over, pull directly through the loop on hook." data-desc-zh="插入针目，挂线，直接拉过钩针上的线圈。"><span data-en="slip stitch" data-zh="引拔针">slip stitch</span></button>
+                <span data-en="to the top of the turning chain." data-zh="到起立锁针的顶部。">to the top of the turning chain.</span>
+            </p>
+        </div>
 
-    <!-- FOOTER LINKS -->
-    <div class="footer-links">
-        <a href="https://sites.google.com/site/glushenkovama/home" target="_blank">👩‍🦱 My personal website</a>
-        <a href="https://www.nottingham.edu.cn/en/sustainability/purpose-vision-and-strategic-plan/sdg-focused-organizations/reunnc.aspx" target="_blank">🌍 reUNNC page</a>
+        <!-- ROW 2 -->
+        <div class="instruction-block">
+            <h3 data-en="📌 Row 2" data-zh="📌 第2行">📌 Row 2</h3>
+            <p>
+                <span data-en="Start new row with" data-zh="新行开始钩">Start new row with</span> 3 <button class="modal-trigger" data-img="chain-stitch.jpg" data-title-en="Chain Stitch" data-title-zh="锁针" data-desc-en="Yarn over, pull through the loop on hook. Repeat to form a chain." data-desc-zh="挂线，拉过钩针上的线圈。重复形成锁针链。"><span data-en="chain stitches" data-zh="锁针">chain stitches</span></button><span data-en=", then work" data-zh="，然后钩">, then work</span> 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochet" data-zh="长针">double crochet</span></button>
+                <span data-en="in the first stitch." data-zh="在第一针里。">in the first stitch.</span><br>
+                <span data-en="In each of the following 5 stitches, work" data-zh="在接下来的5针每针里钩">In each of the following 5 stitches, work</span> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochets in the Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="double crochets in the same stitch" data-zh="长针（同一针里）">double crochets in the same stitch</span></button>
+                <span style="color: purple;" data-en="[this creates the rounded end]" data-zh="[这形成了圆头]">[this creates the rounded end]</span>.<br>
+                <span data-en="Now work" data-zh="现在钩">Now work</span> 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochet" data-zh="长针">double crochet</span></button>
+                <span data-en="into the following 10 stitches until you reach the rounded end." data-zh="在接下来的10针每针里钩1长针，直到圆头部分。">into the following 10 stitches until you reach the rounded end.</span><br>
+                <span data-en="Work" data-zh="钩">Work</span> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochets in the Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个个长针。"><span data-en="double crochets into each of the next 6 stitches" data-zh="在接下来的6针每针里钩2个长针">double crochets into each of the next 6 stitches</span></button>
+                <span data-en=" (the rounded part)." data-zh="（圆头部分）。"> (the rounded part).</span><br>
+                <span data-en="In each of the following 6 stitches, work" data-zh="在接下来的6针每针里钩">In each of the following 6 stitches, work</span> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochets in the Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="double crochets in the same stitch" data-zh="长针（同一针里）">double crochets in the same stitch</span></button>
+                <span style="color: purple;" data-en="[this creates the rounded end]" data-zh="[这形成了圆头]">[this creates the rounded end]</span>.<br>
+                <span data-en="Join with a" data-zh="用">Join with a</span> <button class="modal-trigger" data-img="slip-stitch.jpg" data-title-en="Slip Stitch" data-title-zh="引拔针" data-desc-en="Insert hook into stitch, yarn over, pull directly through the loop on hook." data-desc-zh="插入针目，挂线，直接拉过钩针上的线圈。"><span data-en="slip stitch" data-zh="引拔针">slip stitch</span></button>
+                <span data-en="to the top of the turning chain." data-zh="到起立锁针的顶部。">to the top of the turning chain.</span>
+            </p>
+        </div>
+
+        <!-- Rows 3 and further -->
+        <div class="instruction-block">
+            <h3 data-en="📌 Rows 3 and further" data-zh="📌 第3行及以后">📌 Rows 3 and further</h3>
+            <p data-en="Continue working in the same way, following the increase pattern:" data-zh="按照加针规律继续同样方法钩织：">Continue working in the same way, following the increase pattern:</p>
+            <ul style="margin-left: 1rem; margin-top: 0.5rem;">
+                <li><strong data-en="On straight sides:" data-zh="直边部分：">On straight sides:</strong> 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="double crochet (DC)" data-zh="长针">double crochet (DC)</span></button> <span data-en="per stitch." data-zh="每针1针。">per stitch.</span></li>
+                <li><strong data-en="On rounded ends:" data-zh="圆头部分：">On rounded ends:</strong> <span data-en="increase evenly following the pattern below." data-zh="按照下方规律均匀加针。">increase evenly following the pattern below.</span></li>
+            </ul>
+
+            <!-- 2 COLUMNS LAYOUT -->
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 15px 0;">
+                <!-- LEFT COLUMN - IMAGE -->
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div style="background: #f0ede7; border-radius: 16px; padding: 15px;">
+                        <p><strong data-en="Follow the instructions for the round end shown in the figure:" data-zh="按照图中所示的圆头说明操作：">Follow the instructions for the round end shown in the figure:</strong></p>
+                        <img src="round-end.jpg" alt="Round end instructions" style="width:100%; max-width:250px; height:auto; border-radius:12px; margin: 10px 0;">
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN - INSTRUCTIONS -->
+                <div style="flex: 2; min-width: 250px;">
+                    <div style="background: #fefaf5; border-radius: 16px; padding: 15px; border-left: 5px solid #2c6e49;">
+                        <p><strong data-en="📋 Increase pattern for rounded ends:" data-zh="📋 圆头部分加针规律：">📋 Increase pattern for rounded ends:</strong></p>
+                        <ul style="margin-left: 1rem; line-height: 1.8;">
+                            <li><strong data-en="3rd row:" data-zh="第3行：">3rd row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochet in Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="DC in the same stitch" data-zh="同一针里钩长针">DC in the same stitch</span></button> + 1 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="DC" data-zh="长针">DC</span></button> <span data-en="in the next stitch →" data-zh="在下一针里 →">in the next stitch →</span> <strong data-en="repeat 6 times" data-zh="重复6次">repeat 6 times</strong>.<br>
+                            <span style="color: purple; font-size: 0.85rem;" data-en="Note: In the beginning of each row, one DC is replaced by 3 chain stitches." data-zh="注意：每行开头的一个长针用3个锁针代替。">Note: In the beginning of each row, one DC is replaced by 3 chain stitches.</span></li>
+
+                            <li><strong data-en="4th row:" data-zh="第4行：">4th row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochet in Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="DC in the same stitch" data-zh="同一针里钩长针">DC in the same stitch</span></button> + 2 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="DC" data-zh="长针">DC</span></button> <span data-en="in the next 2 stitches →" data-zh="在接下来的2针里 →">in the next 2 stitches →</span> <strong data-en="repeat 6 times" data-zh="重复6次">repeat 6 times</strong>.</li>
+
+                            <li><strong data-en="5th row:" data-zh="第5行：">5th row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochet in Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="DC in the same stitch" data-zh="同一针里钩长针">DC in the same stitch</span></button> + 3 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="DC" data-zh="长针">DC</span></button> <span data-en="in the next 3 stitches →" data-zh="在接下来的3针里 →">in the next 3 stitches →</span> <strong data-en="repeat 6 times" data-zh="重复6次">repeat 6 times</strong>.</li>
+
+                            <li><strong data-en="6th row:" data-zh="第6行：">6th row:</strong> 2 <button class="modal-trigger" data-img="two-double-crochet.jpg" data-title-en="Double Crochet in Same Stitch" data-title-zh="同一针里钩长针" data-desc-en="Work 1 double crochet into stitch, then work another double crochet into the exact same stitch." data-desc-zh="在针目里钩1个长针，然后在同一个针目里再钩1个长针。"><span data-en="DC in the same stitch" data-zh="同一针里钩长针">DC in the same stitch</span></button> + 4 <button class="modal-trigger" data-img="double-crochet.jpg" data-title-en="Double Crochet" data-title-zh="长针" data-desc-en="Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops." data-desc-zh="挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。"><span data-en="DC" data-zh="长针">DC</span></button> <span data-en="in the next 4 stitches →" data-zh="在接下来的4针里 →">in the next 4 stitches →</span> <strong data-en="repeat 6 times" data-zh="重复6次">repeat 6 times</strong>.</li>
+
+                            <li><strong data-en="And so on..." data-zh="以此类推...">And so on...</strong> <span data-en="Each row increases the number of single DCs by 1 before repeating." data-zh="每行重复前，单长针的数量增加1。">Each row increases the number of single DCs by 1 before repeating.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="small-note">
+                💡 <span data-en="Tip: To keep the rug perfectly flat, distribute increases uniformly around both rounded ends." data-zh="提示：为了保持地毯平整，加针要均匀分布在两个圆头周围。">Tip: To keep the rug perfectly flat, distribute increases uniformly around both rounded ends.</span>
+            </div>
+
+        </div>
+
+        <div class="back-home">
+            <button class="back-link-btn" data-en="↑ Back to top" data-zh="↑ 返回顶部">↑ Back to top</button>
+        </div>
     </div>
+
+    <!-- BASIC STITCHES TAB -->
+    <div id="tab-basic-stitches" class="tab-panel">
+        <h2 data-en="🧵 Basic stitches" data-zh="🧵 基础针法">🧵 Basic stitches</h2>
+        <div class="stitches-grid">
+            <div class="stitch-tabs-mini">
+                <button class="mini-tab active-mini" data-stitch="beginning" data-name-en="Beginning" data-name-zh="起针">Beginning</button>
+                <button class="mini-tab" data-stitch="chain" data-name-en="Chain stitch" data-name-zh="锁针">Chain stitch</button>
+                <button class="mini-tab" data-stitch="double" data-name-en="Double crochet" data-name-zh="长针">Double crochet</button>
+                <button class="mini-tab" data-stitch="inc" data-name-en="2 DC in one stitch" data-name-zh="一针里钩2长针">2 DC in one stitch</button>
+                <button class="mini-tab" data-stitch="slip" data-name-en="Slip stitch" data-name-zh="引拔针">Slip stitch</button>
+            </div>
+            <div id="stitchDisplayArea" class="stitch-detail"></div>
+        </div>
+        <div class="back-home"><button class="back-link-btn" data-en="↑ Back to top" data-zh="↑ 返回顶部">↑ Back to top</button></div>
+    </div>
+
+    <div class="footer-links"><a href="https://sites.google.com/site/glushenkovama/home" target="_blank">👩‍🦱 Instructor: Marina</a><a href="https://www.nottingham.edu.cn/en/sustainability/purpose-vision-and-strategic-plan/sdg-focused-organizations/reunnc.aspx" target="_blank">🌍 reUNNC page</a></div>
 </div>
 
-<!-- MODAL POPUP -->
-<div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center;">
-    <div style="background:white; border-radius:24px; padding:24px; width:95vw; max-width:1200px; text-align:center; position:relative;">
-        <button id="closeModalBtn" style="position:absolute; top:10px; right:10px; background:#dc3545; color:white; border:none; border-radius:50%; width:40px; height:40px; font-size:24px; cursor:pointer;">✕</button>
-
-        <h3 id="modalTitle" style="margin-bottom:16px; color:#2c6e49; font-size:1.8rem; font-weight:bold;">Chain Stitch</h3>
-
-        <!-- DESCRIPTION - BOLD AND ON TOP OF IMAGE -->
-        <p id="modalDesc" style="margin-bottom:20px; color:#000000; font-size:1.2rem; font-weight:bold; line-height:1.5;"></p>
-
-        <!-- IMAGE BELOW DESCRIPTION -->
-        <img id="modalImage" src="" alt="Stitch tutorial" style="width:100%; height:auto; max-height:65vh; object-fit:contain; border-radius:12px;">
-    </div>
-</div>
+<!-- MODAL -->
+<div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;"><div style="background:white; border-radius:24px; padding:24px; width:90%; max-width:800px; text-align:center; position:relative;"><button id="closeModalBtn" style="position:absolute; top:10px; right:10px; background:#dc3545; color:white; border:none; border-radius:50%; width:36px; height:36px; font-size:20px; cursor:pointer;">✕</button><h3 id="modalTitle">Chain Stitch</h3><p id="modalDesc" style="font-weight:bold;"></p><img id="modalImage" src="" style="width:100%; border-radius:12px;"></div></div>
 
 <script>
-    // TAB SWITCHING
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
+    let currentLang = 'en';
 
-    // Welcome page buttons - go to Instructions or Basic Stitches
-    document.querySelectorAll('.welcome-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const targetTab = btn.getAttribute('data-tab');
-            if(targetTab) activateMainTab(targetTab);
-        });
-    });
+    const stitchMap = {
+        beginning: { en: { name: "Beginning", desc: "Create a slip knot: loop yarn around, pull a loop through, tighten on hook.", img: "beginning.jpg" }, zh: { name: "起针", desc: "打一个活结：绕线，拉出一个线圈，套在钩针上并拉紧。", img: "beginning.jpg" } },
+        chain: { en: { name: "Chain stitch", desc: "Yarn over, pull through loop on hook. Repeat to form chain.", img: "chain-stitch.jpg" }, zh: { name: "锁针", desc: "挂线，拉过钩针上的线圈。重复形成锁针链。", img: "chain-stitch.jpg" } },
+        double: { en: { name: "Double crochet", desc: "Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over pull through 2 loops, yarn over pull through 2 loops.", img: "double-crochet.jpg" }, zh: { name: "长针", desc: "挂线，插入针目，挂线拉出线圈，挂线穿过2个线圈，挂线穿过剩余2个线圈。", img: "double-crochet.jpg" } },
+        inc: { en: { name: "2 DC in one stitch", desc: "Work 2 double crochets in the same stitch.", img: "two-double-crochet.jpg" }, zh: { name: "一针里钩2长针", desc: "在同一针目里钩2个长针。", img: "two-double-crochet.jpg" } },
+        slip: { en: { name: "Slip stitch", desc: "Insert hook into stitch, yarn over, pull directly through loop on hook.", img: "slip-stitch.jpg" }, zh: { name: "引拔针", desc: "插入针目，挂线，直接拉过钩针上的线圈。", img: "slip-stitch.jpg" } }
+    };
 
-    function activateMainTab(tabId) {
-        panels.forEach(panel => {
-            panel.classList.remove('active-panel');
-        });
-        const activePanel = document.getElementById(tabId);
-        if(activePanel) activePanel.classList.add('active-panel');
+    function updateStitchDisplay() {
+        const activeMini = document.querySelector('.mini-tab.active-mini');
+        if(activeMini) {
+            const stitchId = activeMini.getAttribute('data-stitch');
+            const data = stitchMap[stitchId];
+            if(data) {
+                const langData = currentLang === 'en' ? data.en : data.zh;
+                document.getElementById('stitchDisplayArea').innerHTML = `<div style="font-size:1.4rem; font-weight:bold;">${langData.name}</div><p style="margin:10px 0; font-weight:bold;">${langData.desc}</p><img src="${langData.img}" style="max-width:100%; border-radius:12px;">`;
+            }
+        }
+    }
 
-        tabBtns.forEach(btn => {
-            btn.classList.remove('active');
-            if(btn.getAttribute('data-tab') === tabId) {
-                btn.classList.add('active');
+    function applyLanguage(lang) {
+        currentLang = lang;
+        // Update all elements with data-en and data-zh
+        document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+            if(el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'STRONG' || el.tagName === 'LI' || el.tagName === 'SPAN' || el.tagName === 'DIV') {
+                el.innerText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
             }
         });
 
-        if(tabId === 'tab-basic-stitches') {
-            refreshStitchPreviewFromActiveMini();
-        }
+        // Update stitch tab button texts
+        document.querySelectorAll('.mini-tab').forEach(btn => {
+            const enText = btn.getAttribute('data-name-en');
+            const zhText = btn.getAttribute('data-name-zh');
+            if (enText && zhText) {
+                btn.innerText = lang === 'en' ? enText : zhText;
+            }
+        });
+
+        // Update tab buttons specifically
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.innerText = lang === 'en' ? btn.getAttribute('data-en') : btn.getAttribute('data-zh');
+        });
+
+        // Update back top buttons (use .back-link-btn)
+        document.querySelectorAll('.back-link-btn').forEach(btn => {
+            btn.innerText = lang === 'en' ? btn.getAttribute('data-en') : btn.getAttribute('data-zh');
+        });
+
+        // Update modal triggers titles/descs
+        document.querySelectorAll('.modal-trigger').forEach(btn => {
+            btn.setAttribute('data-title', lang === 'en' ? btn.getAttribute('data-title-en') : btn.getAttribute('data-title-zh'));
+            btn.setAttribute('data-desc', lang === 'en' ? btn.getAttribute('data-desc-en') : btn.getAttribute('data-desc-zh'));
+            btn.innerText = (lang === 'en' ? btn.getAttribute('data-title-en') : btn.getAttribute('data-title-zh')) || (lang === 'en' ? 'chain stitch' : '锁针');
+        });
+        updateStitchDisplay();
     }
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => activateMainTab(btn.getAttribute('data-tab')));
+    // Language switcher
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyLanguage(btn.getAttribute('data-lang'));
+        });
     });
 
-    // STITCH DATA
-        const stitchData = {
-        beginning: {
-            name: "Beginning of the work",
-            desc: "Create a slip knot: loop yarn around, pull a loop through, tighten on crochet hook.",
-            img: "beginning.jpg"
-        },
-        chain: {
-            name: "Chain stitch (Ch.st.)",
-            desc: "Yarn over, pull through the loop on hook. Repeat to form a chain. The foundation of most rug projects.",
-            img: "chain-stitch.jpg"
-        },
-        single: {
-            name: "Single crochet (SC)",
-            desc: "Insert hook into stitch, yarn over, pull up a loop (2 loops on hook), yarn over, pull through both loops.",
-            img: "single-crochet.jpg"
-        },
-        double: {
-            name: "Double crochet (DC)",
-            desc: "Yarn over, insert hook into stitch, yarn over, pull up a loop, yarn over, pull through 2 loops, yarn over, pull through remaining 2 loops.",
-            img: "double-crochet.jpg"
-        },
-        inc: {
-            name: "2 DC in one stitch",
-            desc: "Work 1 double crochet into stitch, then work another double crochet into the exact same stitch.",
-            img: "two-double-crochet.jpg"
-        },
-        slip: {
-            name: "Slip stitch",
-            desc: "Insert hook into stitch, yarn over, pull directly through the loop on hook.",
-            img: "slip-stitch.jpg"
-        }
-    };
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active-panel'));
+            document.getElementById(tabId).classList.add('active-panel');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if(tabId === 'tab-basic-stitches') updateStitchDisplay();
+        });
+    });
 
-    function updateStitchPreview(stitchId) {
-        const data = stitchData[stitchId];
-        if(!data) return;
-        const displayDiv = document.getElementById('stitchDisplayArea');
-        if(displayDiv) {
-            displayDiv.innerHTML = `
-                <div class="stitch-name">${data.name}</div>
-                <p style="font-size:1rem; line-height:1.5; margin-bottom:15px; font-weight:bold;">${data.desc}</p>
-                <div style="text-align: center; margin: 10px 0;">
-                    <img src="${data.img}" alt="${data.name}" style="width:100%; max-width:500px; height:auto; border-radius:16px; border:2px solid #e2dbcf;">
-                </div>
-            `;
-        }
-    }
+    // Welcome buttons
+    document.querySelectorAll('.welcome-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active-panel'));
+            document.getElementById(tabId).classList.add('active-panel');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`.tab-btn[data-tab="${tabId}"]`).classList.add('active');
+            if(tabId === 'tab-basic-stitches') updateStitchDisplay();
+        });
+    });
 
-    function refreshStitchPreview() {
-        const active = document.querySelector('.mini-tab.active-mini');
-        if(active) updateStitchPreview(active.getAttribute('data-stitch'));
-        else updateStitchPreview('beginning');
-    }
-
-    // MINI TABS
+    // Mini tabs for stitches
     document.querySelectorAll('.mini-tab').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.mini-tab').forEach(b => b.classList.remove('active-mini'));
             btn.classList.add('active-mini');
-            updateStitchPreview(btn.getAttribute('data-stitch'));
+            updateStitchDisplay();
         });
     });
 
-    // STITCH LINKS (to basic stitches tab)
-    document.querySelectorAll('.stitch-link').forEach(link => {
-        link.addEventListener('click', (e) => {
+    // Back to top functionality
+    document.querySelectorAll('.back-link-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
             e.preventDefault();
-            let target = link.getAttribute('data-stitch-trigger');
-            const mapping = { double: 'double', chain: 'chain', slip: 'slip', inc: 'inc', single: 'single' };
-            target = mapping[target] || 'beginning';
-
-            activateMainTab('tab-basic-stitches');
-            const targetBtn = Array.from(document.querySelectorAll('.mini-tab')).find(b => b.getAttribute('data-stitch') === target);
-            if(targetBtn) {
-                document.querySelectorAll('.mini-tab').forEach(b => b.classList.remove('active-mini'));
-                targetBtn.classList.add('active-mini');
-                updateStitchPreview(target);
-            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 
-    // BACK TO TOP
-    document.getElementById('backToTopInstructions')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
-    });
-    document.getElementById('backToTopStitches')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // ========== MODAL POPUP - WORKING PERFECTLY ==========
+    // ================= MODAL POPUP - FIXED =================
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDesc');
-    const closeBtn = document.getElementById('closeModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
 
-    // All modal trigger buttons (class="modal-trigger")
+    // Open modal when clicking any .modal-trigger button
     document.querySelectorAll('.modal-trigger').forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const imgSrc = this.getAttribute('data-img');
-            const title = this.getAttribute('data-title');
-            const desc = this.getAttribute('data-desc');
-
-            modalTitle.textContent = title || 'Chain Stitch';
-            modalImg.src = imgSrc || 'chain-stitch.jpg';
-            modalDesc.textContent = desc || 'Yarn over, pull through the loop on hook. Repeat to form a chain.';
-
-            // Handle missing image - show placeholder
-            modalImg.onerror = function() {
-                this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Crect width="200" height="200" fill="%23f0ede7"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23666"%3E' + encodeURIComponent(title || 'Chain Stitch') + '%3C/text%3E%3C/svg%3E';
-            };
-
+            modalTitle.innerText = btn.getAttribute('data-title') || (currentLang === 'en' ? 'Stitch' : '针法');
+            modalDesc.innerText = btn.getAttribute('data-desc') || '';
+            modalImg.src = btn.getAttribute('data-img');
             modal.style.display = 'flex';
         });
     });
 
-    // Close modal when X is clicked
-    if(closeBtn) {
-        closeBtn.addEventListener('click', () => {
+    // Close modal when clicking the X button
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
             modal.style.display = 'none';
         });
     }
 
-    // Close modal when clicking outside the white box
-    modal.addEventListener('click', (e) => {
-        if(e.target === modal) {
+    // Close modal when clicking outside the white content area
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
             modal.style.display = 'none';
         }
     });
 
-    // Initial preview
-    refreshStitchPreview();
+    // Initialize
+    applyLanguage('en');
+    updateStitchDisplay();
 </script>
 </body>
 </html>
